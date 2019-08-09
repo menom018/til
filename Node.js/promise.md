@@ -39,3 +39,7 @@ Promise.all(promiseList.map(p => p.catch(err => {
 
 
 ```
+
+### 備考
+- MDNのリファレンスにも対処法かいてあったｗ＠
+  - https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all#Promise.all_fail-fast_behaviour
