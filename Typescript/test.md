@@ -8,3 +8,13 @@
     - 一応代替案として aws-sdk-mock ライブラリでモック化は可能
 - jasmine の場合、スタブ対象のオブジェクトを`any`型に cast すれば任意の関数にスタブ化できる
   - `spyOn((target as any), anyFunc)`
+
+## interface からモックオブジェクトを作成する方法
+
+- `typemoq`を使う
+  - https://github.com/florinn/typemoq
+
+```typescript
+const eventMock = TypeMoq.Mock.ofType<monaco.editor.IStandaloneCodeEditor>();
+component.onInitHandler(eventMock.object);
+```
