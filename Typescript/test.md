@@ -8,11 +8,32 @@
     - 一応代替案として aws-sdk-mock ライブラリでモック化は可能
 - jasmine の場合、スタブ対象のオブジェクトを`any`型に cast すれば任意の関数にスタブ化できる
   - `spyOn((target as any), anyFunc)`
+  
+### 解決策
+- sinonでjasmineと同様に`any`でキャストすると`型に呼び出しシグネチャがない式を呼び出すことはできません。型 '((obj: any) => SinonStub<any[], any>) | ((obj: {}) => SinonStub<unknown[], {}>)' には互換性のある呼び出しシグネチャがありません。`とエラーになる
+- なのでany型ではなく独自のモック用インターフェースを用意し、そのインターフェースにCastさせることで回避できた。
+
+#### AWS.Glueのインスタンスをスタブにする場合の例
+
+```typescript
+interface MockGlue {
+        getTable: (param: any) => {
+            promise: () => Promise<any>
+        }
+    }
+    // stub化時にエラーが出ず、任意の返り値(厳密にはインターフェースで定義した値)を設定できる
+    sinon.stub((clients.Glue as MockGlue), 'getTable').returns({
+                    promise: () => Promise.resolve({
+                        mockTable
+                    })
+                })
+```
 
 ## interface からモックオブジェクトを作成する方法
 
 - `typemoq`を使う
   - https://github.com/florinn/typemoq
+
 
 ```typescript
 const eventMock = TypeMoq.Mock.ofType<monaco.editor.IStandaloneCodeEditor>();
