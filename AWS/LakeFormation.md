@@ -52,7 +52,16 @@ AWS Lake Formationは、データレイク管理者、データベース作成�
   - table2
   - table3（登録パスにつくる）
   
-
+- S3locationに登録していないパスにあるDB、テーブルでもアクセス制御は可能(ターゲットユーザがS#Fullアクセスの権限がある場合))
+  - リード権限に関しては関係なさそう
+  - ただしDB作成などのWrite権限の際には必要な要素らしい
+    - https://docs.aws.amazon.com/ja_jp/lake-formation/latest/dg/data-location-permissions.html
+- じゃあなんのために登録が必要化
+- ただしターゲットユーザがS3権限がない場合
+  - 登録済みのS3パスにあるテーブルへの許可設定が付与された場合
+    - 暗黙的にそのパスへのS3権限が付与されるため、クエリを実行できる
+  - 未登録のS3パスにあるテーブルへの許可設定が付与された場合
+    - LakeFormation自体の許可設定は有効だが、S3へのアクセス権限は付与されないため、クエリ実行に失敗する
 
 # ブログタイトル
 
@@ -83,11 +92,53 @@ Lake Formationを利用することでデータレイクの構築やアクセス
 # アクセス制御をためしてみる。
 実際にLake Formationでアクセス権限を設定して、実際に制御されているかどうか確認してみたいと思います。
 
-## 検証用データカタログ構築
+確認手順
 
-今回の検証用に以下の構成のデータカタログを構築しています。
+1. LakeFormation管理者権限のIAMユーザでデータカタログを構築
+   - LakeFormationに登録済みのS3パス、未登録S3パスそれぞれにデータを置き、登録済・未登録のパスのテーブルに対するアクセス制御の影響も確認してみます。
+1. 管理者で一般ユーザに対して権限の許可設定を付与する。
+1. 一般ユーザでLakeFromationまたはAthenaコンソールで許可設定が有効になっているかを確認する  
 
-TODO 表のせる
+
+## 検証用環境構築
+
+今回の検証用に以下の環境を構築しています。
+
+### IAMユーザー
+
+- meno.m
+  - LakeFormation管理者。検証用DB、テーブルの作成者。
+  - 付与ポリシー：Administrator
+- meno-test
+  - 一般ユーザ。このユーザに対して権限の許可を与えていき、アクセス制御の挙動を確認していきます。
+  - 付与ポリシー：AmazonAthenaFullAccess、AWSGlueConsoleFullAccess、AmazonS3FullAccess
+
+### LakeFormationに登録するS3パス
+以下のパスをLakeFormationのデータレイクとして登録しています。
+
+- s3://opst-meno-lakeformation/regist-location 
+
+### 構築したデータカタログ
+
+#### データベース
+  - regist-db
+    - DBのロケーションをLakeFormation登録済みのパスに設定
+    - `s3://opst-meno-lakeformation/regist-location/regist-db`
+  - not-regist-db
+    - DBのロケーションをLakeFormation未登録のパスに設定
+    - `s3://opst-meno-lakeformation/not-regist-location/db`
+  
+#### テーブル一覧
+
+
+| データベース  | テーブル               | S3パス                                                             | LakeFormation <br> 登録済パス |
+| ------------- | ---------------------- | ------------------------------------------------------------------ | ----------------------------- |
+| regist-db     | table1                 | s3://opst-meno-lakeformation/regist-location/regist-db/table1/     | ○                             |
+| regist-db     | table2                 | s3://opst-meno-lakeformation/regist-location/regist-db/table2/     | ○                             |
+| regist-db     | table3-not-regist-path | s3://opst-meno-lakeformation/not-regist-location/regist-db/table3/ |                               |
+| not-regist-db | table1                 | s3://opst-meno-lakeformation/not-regist-location/db/table1/        |                               |
+| not-regist-db | table2                 | s3://opst-meno-lakeformation/not-regist-location/db/table2/        |                               |
+| not-regist-db | table3-regist-path     | s3://opst-meno-lakeformation/regist-location/db/table3/            | ○                             |
 
 ## Lake Formation初期設定
 
@@ -95,4 +146,50 @@ LakeFormationで上記データカタログを管理できるように設定し�
 
 ### LakeFormation管理者登録（LakeFormationコンソール初回アクセス時）
 
+LakeFormationコンソールに初回アクセス時は、
+LakeFormation管理者の登録が要求されるので、任意のIAMユーザまたはロールを選択してください（管理者は最大10ユーザまで）。
+
+管理者権限をもつIAMであれば後から管理者の追加・変更可能です。
+
+今回はIAMユーザ`meno.m`を管理者にしています。
+
+![TODO admin]
+![TODO admin2]
+
 ### データレイク登録
+
+コンソールからデータレイクとして利用するS3パスを登録します。
+
+![todo-registdatalake]
+
+### データカタログ構築
+
+LakeFormationコンソールからDBおよびテーブルを登録します。
+このあたりのUIはGlueとほぼ同様なので、操作手順は割愛しますが、
+1箇所だけ注意点があります。
+
+DB作成時のUIでチェックボックス「`Use only IAM access control for new tables in this database`」があると思いますが、
+こちらのチェックは外してDBを登録してください。
+
+チェックした場合、Glue、Athenaにアクセス可能な全てのIAMユーザが
+作成したDBに対してアクセスできる許可設定が自動的に設定されます。
+
+この許可設定はLakeFormationコンソールの「Data permissions」ページから
+確認できますので、チェック外し忘れた場合でも、後からその許可設定を取り消すことができます。
+
+
+
+
+![todo-checkbox]
+
+
+
+## 1. 初期状態の確認
+
+まずは、管理者かつDB作成者`meno.m`と一般ユーザ`meno-test`のDB一覧ページを確認します。
+
+当たり前ですが`meno.m`からは作成したDB、テーブル情報が全て確認できます。
+`meno-test`からはDBへの権限が一つもない状態のため、一覧に表示されていません。
+
+![meno-db]
+![meno-testdb]
