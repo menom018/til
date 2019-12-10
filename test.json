@@ -1,0 +1,630 @@
+{
+    "NextToken": "CAISoAIIARL5AQgDEvQBAFVNWCanDzGcgRlDetjcuYbjc2aTrstY0BenlQLF2CBJeyJAbiI6IlBhZ2luYXRpb25Db250aW51YXRpb25EVE8iLCJuZXh0S2V5IjoiQUFBQUFBQUFBbVpFQVFFQmJqSnp5OEhWU1p5aGRQUkxOYjQwME1XQkxLeDlVRWFTdGdQdjE5Z0plOTlsY0dZN1IzSnZkWEJOWlcxaVpYSXlPRFUyTWpRd05TMWxZemxoTFRReE16WXRPRGN3TUMwNE0yVXpaV1l5WkRBelpqUTciLCJwcmV2aW91c1JlcXVlc3RUaW1lIjoxNTY2Mjg3NTI5OTU0fRogladV9qEOx4od569zgUrsWtuv8AuCRJbpfAjIjH8jKC0=", 
+    "Users": [
+        {
+            "Username": "keycloak_s_iguchi@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607614.014, 
+            "UserLastModifiedDate": 1563607615.589, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "d938afcb-cc14-40fd-aa28-bd6346e845f6"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"s_iguchi@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607614006}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "s_iguchi@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_uranaka@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1564765439.939, 
+            "UserLastModifiedDate": 1564765439.939, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "6ff921f3-e50e-4157-94e0-ff81ad5e07a0"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"uranaka@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1564765439931}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "uranaka@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_suenaga@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607584.352, 
+            "UserLastModifiedDate": 1563607586.033, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "08dd4996-29a3-420b-b2d6-e35a8448d64f"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"suenaga@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607584343}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "suenaga@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_meno_c@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563757882.406, 
+            "UserLastModifiedDate": 1563764176.607, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "ea1296d5-e650-4651-94a7-ff5ef4452be8"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"meno_c@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563757882401}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "meno_c@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_ta_saitoh@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607351.809, 
+            "UserLastModifiedDate": 1563607353.396, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "cd27e562-6dc3-40d7-8008-a768f957dc13"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"ta_saitoh@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607351801}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "ta_saitoh@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_t_ohishi@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607083.275, 
+            "UserLastModifiedDate": 1563607084.883, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "696b9f45-2dbe-45b1-912c-5a14250569e6"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"t_ohishi@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607083268}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "t_ohishi@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_sugiura@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607268.205, 
+            "UserLastModifiedDate": 1563607269.937, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "167372c4-d34f-473a-97c2-89fbddc5c991"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"sugiura@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607268198}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "sugiura@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_k_tamura@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607356.792, 
+            "UserLastModifiedDate": 1563607358.368, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "ec223f62-7299-428c-9104-f53109140ff4"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"k_tamura@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607356787}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "k_tamura@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_s_ohta@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607243.361, 
+            "UserLastModifiedDate": 1564645729.069, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "a89194c3-f591-4baf-a4cc-7bf2bd90ed75"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"s_ohta@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607243353}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "s_ohta@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_yuh_yamaguchi@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607188.65, 
+            "UserLastModifiedDate": 1563782016.077, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "a5454d5a-4be7-47fa-9b4b-aa3cf5ace17f"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"yuh_yamaguchi@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607188644}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "yuh_yamaguchi@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_kawahara@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607303.112, 
+            "UserLastModifiedDate": 1563607304.569, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "4aafd3d8-d054-4dd7-abd0-7fef07eec3c0"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"kawahara@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607303108}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "kawahara@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_s_sekine@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607312.723, 
+            "UserLastModifiedDate": 1563607314.323, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "55e0eb3c-44eb-4def-badf-6436e9a6d884"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"s_sekine@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607312717}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "s_sekine@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_okazawa@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607558.699, 
+            "UserLastModifiedDate": 1563874318.326, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "7ce273e2-0064-4304-85f9-27304fce687c"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"okazawa@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607558696}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "okazawa@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_yu_satoh@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607150.483, 
+            "UserLastModifiedDate": 1565926842.804, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "5c4bec56-2bbc-44b9-a7da-101145f9ce60"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"yu_satoh@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607150479}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "yu_satoh@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_kei_satoh@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607327.449, 
+            "UserLastModifiedDate": 1563607329.063, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "63f834c3-315d-47b6-8f18-749c1e16a973"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"kei_satoh@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607327441}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "kei_satoh@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_koshino@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563606955.216, 
+            "UserLastModifiedDate": 1565771886.204, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "6c3a8f01-6f37-4f38-ada3-a8b5c13e22cc"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"koshino@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563606955208}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "koshino@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_kurisu@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607445.499, 
+            "UserLastModifiedDate": 1566180225.645, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "9888a153-cbc8-4fd2-a01e-ad02d673bd52"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"kurisu@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607445494}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "kurisu@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_mm-test+ph24_prod_release_conf@opst.co.jp", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563614373.572, 
+            "UserLastModifiedDate": 1563614781.035, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "de65b9a7-0193-4ed3-bfc0-5a110d76498d"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"mm-test+ph24_prod_release_conf@opst.co.jp\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563614373567}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "mm-test+ph24_prod_release_conf@opst.co.jp"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_kurokawa@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607202.904, 
+            "UserLastModifiedDate": 1563607204.516, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "e1d7d814-de14-4fdf-812e-2158be7d8464"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"kurokawa@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607202899}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "kurokawa@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_j_koike@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607623.791, 
+            "UserLastModifiedDate": 1563607625.415, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "ad80a268-261b-453d-95b0-ff8cba8dc2b3"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"j_koike@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607623782}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "j_koike@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_k_hatakeyama@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1564479935.023, 
+            "UserLastModifiedDate": 1564479935.023, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "f11aa1df-ab90-4c73-97d7-1957f2c0bdff"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"k_hatakeyama@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1564479935015}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "k_hatakeyama@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_kai@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607366.595, 
+            "UserLastModifiedDate": 1563607368.534, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "28e788d2-1e7f-45b9-a8b1-0f6efa46bb3f"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"kai@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607366590}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "kai@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_omata@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563607223.765, 
+            "UserLastModifiedDate": 1563607225.432, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "016e65f4-5d82-4820-a178-707e9c277cbb"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"omata@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563607223756}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "omata@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_m_kido@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1563606999.707, 
+            "UserLastModifiedDate": 1563607001.381, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "a18b1b23-94a5-41ed-ac0c-30e558c887da"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"m_kido@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1563606999703}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "m_kido@macromill.com"
+                }
+            ]
+        }, 
+        {
+            "Username": "keycloak_s_takai@macromill.com", 
+            "Enabled": true, 
+            "UserStatus": "EXTERNAL_PROVIDER", 
+            "UserCreateDate": 1564475667.726, 
+            "UserLastModifiedDate": 1564477112.101, 
+            "Attributes": [
+                {
+                    "Name": "sub", 
+                    "Value": "dd4b5e7d-6b15-49f2-a896-464616907cb7"
+                }, 
+                {
+                    "Name": "identities", 
+                    "Value": "[{\"userId\":\"s_takai@macromill.com\",\"providerName\":\"keycloak\",\"providerType\":\"SAML\",\"issuer\":\"https://mmdp.jp/auth/realms/vamps\",\"primary\":true,\"dateCreated\":1564475667721}]"
+                }, 
+                {
+                    "Name": "email_verified", 
+                    "Value": "true"
+                }, 
+                {
+                    "Name": "email", 
+                    "Value": "s_takai@macromill.com"
+                }
+            ]
+        }
+    ]
+}
