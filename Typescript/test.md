@@ -12,6 +12,7 @@
 ### 解決策
 - sinonでjasmineと同様に`any`でキャストすると`型に呼び出しシグネチャがない式を呼び出すことはできません。型 '((obj: any) => SinonStub<any[], any>) | ((obj: {}) => SinonStub<unknown[], {}>)' には互換性のある呼び出しシグネチャがありません。`とエラーになる
 - なのでany型ではなく独自のモック用インターフェースを用意し、そのインターフェースにCastさせることで回避できた。
+  - 追記：returns側の返り値を`any`にキャストでも可能
 
 #### AWS.Glueのインスタンスをスタブにする場合の例
 
@@ -39,3 +40,13 @@ interface MockGlue {
 const eventMock = TypeMoq.Mock.ofType<monaco.editor.IStandaloneCodeEditor>();
 component.onInitHandler(eventMock.object);
 ```
+
+
+# クラスのインスタンスメソッドをスタブ化する方法
+
+- `sinon.stub(Class名.prototype,'method')`
+  - これだけで良かった。。
+  - 今まではインスタンス化したオブジェクトのメソッドをスタブ化する場合、そのオブジェクトに対してスタブ化していた
+    - そのため、テスト対象のメソッド内でnewされたオブジェクトに対してスタブ化することができず、インスタンスオブジェクトを引数で受け取ったり、クラスメソッドを定義してそこからインスタンスオブジェクトを取得するように改修したりしていた。
+    - そんなことしなくても良かった
+    - prototypeの仕様をちゃんと理解しておきましょう
